@@ -1,5 +1,10 @@
 @import "../style/variables";
 @import "patternfly";
 
-@import "homepage";
+@import "_createSession";
+@import "_session";
 @import "_pointselector";
+
+header {
+  padding-bottom: 20px;
+}
