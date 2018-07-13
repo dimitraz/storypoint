@@ -1,10 +1,6 @@
 @import "../style/variables";
 @import "patternfly";
 
-@import "_createSession";
+@import "_global";
 @import "_session";
 @import "_pointselector";
-
-header {
-  padding-bottom: 20px;
-}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav, NavItem, TabContent, TabPane, Tabs } from 'patternfly-react';
 import { PointingSession } from './PointingSession';
+import { JiraLogin } from './JiraLogin';
 
 export class Session extends React.Component {
 
@@ -27,17 +28,20 @@ export class Session extends React.Component {
                 <NavItem eventKey={2}> JIRA </NavItem>
                 <NavItem eventKey={3}> Issues </NavItem>
               </Nav>
-              <TabContent>
-                <TabPane eventKey={1}>
-                  <PointingSession />
-                </TabPane>
-                <TabPane eventKey={2}>
-                {/* JIRA Content */}
-                </TabPane>
-                <TabPane eventKey={3}>
-                {/* Issues Content */}
-                </TabPane>
-              </TabContent>
+
+              <div className="PaddedContainer">
+                <TabContent>
+                  <TabPane eventKey={1}>
+                    <PointingSession />
+                  </TabPane>
+                  <TabPane eventKey={2}>
+                    <JiraLogin />
+                  </TabPane>
+                  <TabPane eventKey={3}>
+                  {/* Issues Content */}
+                  </TabPane>
+                </TabContent>
+              </div>
             </div>
           </Tabs>
         </div>

@@ -25,12 +25,15 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <Switch>
-          {this.state.sessionId && <Redirect exact from='/' to={`/session/${this.state.sessionId}`} />}
-          <Route exact path="/" render={() => <CreateSession onSessionId={this.onSessionIdCreated} />} />
-          <Route exact path="/session/:id" component={Session} />
-          <Redirect to="/" />
-        </Switch>
+        
+        <div className="Content clearfix">
+          <Switch>
+            {this.state.sessionId && <Redirect exact from='/' to={`/session/${this.state.sessionId}`} />}
+            <Route exact path="/" render={() => <CreateSession onSessionId={this.onSessionIdCreated} />} />
+            <Route exact path="/session/:id" component={Session} />
+            <Redirect to="/" />
+          </Switch>
+        </div>
       </div>
     );
   }
